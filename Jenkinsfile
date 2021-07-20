@@ -33,6 +33,11 @@ pipeline {
                 sh "echo ${env.test}"
                 sh "mkdir -p ${WORKSPACE}/configDir/incomingDir"
                 sh "ls -la"
+                sh "cd ${WORKSPACE}/configDir"
+                                sh "ls -la"
+                sh "cd ${WORKSPACE}/configDir"
+                                sh "ls -la"
+
             }
         }
     }
