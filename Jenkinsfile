@@ -1,7 +1,11 @@
 @Library('shared_lib') _
 
 pipeline {
-    agent any
+    agent none
+    options{
+        skipDefaultCheckout true
+        disableConcurrentBuilds()
+    }
     stages {
         stage('build') {
             steps {
