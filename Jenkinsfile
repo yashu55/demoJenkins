@@ -31,12 +31,19 @@ pipeline {
                 sh 'echo Hello'
                 demoFunc()
                 sh "echo ${env.test}"
+                                sh "pwd"
+
                 sh "mkdir -p ${WORKSPACE}/configDir/incomingDir"
                 sh "ls -la"
+                                sh "pwd"
+
                 sh "cd ${WORKSPACE}/configDir"
-                                sh "ls -la"
+                sh "ls -la"
+                                sh "pwd"
+
                 sh "cd ${WORKSPACE}/configDir"
-                                sh "ls -la"
+                sh "ls -la"
+                sh "pwd"
 
             }
         }
