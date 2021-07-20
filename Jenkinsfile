@@ -25,7 +25,7 @@ pipeline {
             agent any
             when{
                 beforeAgent true
-                equals expected: "Hello", actual: "Hello"
+                equals expected: "Hello", actual: "Helloii"
             }
             steps {
                 sh 'echo Hello'
