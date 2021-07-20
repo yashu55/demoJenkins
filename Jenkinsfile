@@ -7,6 +7,14 @@ pipeline {
         disableConcurrentBuilds()
     }
     stages {
+
+        stage('git checkout'){
+            agent any
+            steps{
+                cleanWs()
+            }
+        }
+
         stage('build') {
             agent any
             steps {
