@@ -11,10 +11,13 @@ pipeline {
         stage('git checkout'){
             agent any
             steps{
-                cleanWs()
-                def scmVars = checkout scm
-                env.GIT_URL = scmVars.GIT_URL
-                env.GIT_COMMIT = scmVars.GIT_COMMIT
+
+                script{
+                    cleanWs()
+                    def scmVars = checkout scm
+                    env.GIT_URL = scmVars.GIT_URL
+                    env.GIT_COMMIT = scmVars.GIT_COMMIT
+                }
             }
         }
 
