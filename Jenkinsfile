@@ -8,6 +8,7 @@ pipeline {
     }
     stages {
         stage('build') {
+            agent any
             steps {
                 sh 'echo Hello'
                 demoFunc()
