@@ -31,6 +31,7 @@ pipeline {
                 sh 'echo Hello'
                 demoFunc()
                 sh "echo ${env.test}"
+                sh "mkdir -p ${WORKSPACE}/configDir/incomingDir"
             }
         }
     }
