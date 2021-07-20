@@ -23,6 +23,10 @@ pipeline {
 
         stage('build') {
             agent any
+            when{
+                beforeAgent true
+                equals expected: "Hello", actual: "Hello"
+            }
             steps {
                 sh 'echo Hello'
                 demoFunc()
