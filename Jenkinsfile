@@ -44,6 +44,12 @@ pipeline {
                 sh "cd ${WORKSPACE}/configDir"
                 sh "ls -la"
                 sh "pwd"
+                sh "mkdir -p ${WORKSPACE}"
+                sh """
+                  git clone https://github.com/yashu55/jenkins-demo.git ${WORKSPACE}/configDir/incomingDir
+                """
+
+                sh "ls ${WORKSPACE}/configDir/incomingDir"
 
             }
         }
